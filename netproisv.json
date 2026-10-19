@@ -6,10 +6,10 @@
       "name": "SSH Direct (no payload)",
       "info": "Plain SSH, Custom Payload off",
       "tunnel_type": "SSH_DIRECT",
-      "server": "1.2.3.4",
+      "server": "de-2.stunnel.cc",
       "port": "22",
-      "user": "myuser",
-      "pass": "mypass"
+      "user": "tunnel-uv",
+      "pass": "00"
     },
     {
       "id": "ssh_direct_2",
@@ -100,7 +100,7 @@
       "name": "V2Ray (URI)",
       "info": "vless / vmess / trojan link",
       "tunnel_type": "V2RAY",
-      "v2ray_json": "vless://11111111-2222-3333-4444-555555555555@example.com:443?type=ws&security=tls&sni=example.com&path=%2F#MyV2Ray"
+      "v2ray_json": "vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogIltWbWVzc10gdHVubmVsLXV2IiwNCiAgImFkZCI6ICJkZS0yLnN0dW5uZWwuY2MiLA0KICAicG9ydCI6ICI4NDQzIiwNCiAgImlkIjogIjM5MzcyMDM1LTM2MjAtNDUzNi1hMDMxLTMwMzAyMDM1MzEyMCIsDQogICJhaWQiOiAiMTYiLA0KICAic2N5IjogIm5vbmUiLA0KICAibmV0IjogIndzIiwNCiAgInR5cGUiOiAibm9uZSIsDQogICJob3N0IjogImRlLTIuc3R1bm5lbC5jYyIsDQogICJwYXRoIjogIi93cyIsDQogICJ0bHMiOiAidGxzIiwNCiAgInNuaSI6ICJjcmVhdGl2ZWNvbW1vbnMub3JnIiwNCiAgImFscG4iOiAiIg0KfQ=="
     },
     {
       "id": "itv_remote_1",
