@@ -1,0 +1,32 @@
+{
+  "show_network_list": true,
+  "networks": [
+    {
+      "id": "net_1",
+      "name": "MTN Unlimited Premium",
+      "info": "VIP High Speed • 4G/5G",
+      "tunnel_type": 1,
+      "server": "1.2.3.4",
+      "port": "22",
+      "user": "mtnuser",
+      "pass": "mtnpass",
+      "sni": "mtn.co.za",
+      "payload": "GET / HTTP/1.1\r\nHost: mtn.co.za\r\n\r\n",
+      "proxy_ip": "1.2.3.4",
+      "proxy_port": "8080"
+    },
+    {
+      "id": "net_2",
+      "name": "Airtel Free Net V2Ray",
+      "info": "Fast & Stable V2Ray",
+      "tunnel_type": 7,
+      "v2ray_json": "{\n  \"outbounds\": [...]\n}"
+    },
+    {
+      "id": "net_3",
+      "name": "Orange Special (.itv File)",
+      "info": "Download Remote Config",
+      "config_url": "https://raw.githubusercontent.com/your-username/your-repo/main/configs/orange.itv"
+    }
+  ]
+}
