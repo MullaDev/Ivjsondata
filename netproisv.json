@@ -2,31 +2,111 @@
   "show_network_list": true,
   "networks": [
     {
-      "id": "net_1",
-      "name": "MTN Unlimited Premium",
-      "info": "VIP High Speed • 4G/5G",
-      "tunnel_type": 1,
+      "id": "ssh_direct_1",
+      "name": "SSH Direct (no payload)",
+      "info": "Plain SSH, Custom Payload off",
+      "tunnel_type": "SSH_DIRECT",
       "server": "1.2.3.4",
       "port": "22",
-      "user": "mtnuser",
-      "pass": "mtnpass",
-      "sni": "mtn.co.za",
-      "payload": "GET / HTTP/1.1\r\nHost: mtn.co.za\r\n\r\n",
-      "proxy_ip": "1.2.3.4",
-      "proxy_port": "8080"
+      "user": "myuser",
+      "pass": "mypass"
     },
     {
-      "id": "net_2",
-      "name": "Airtel Free Net V2Ray",
-      "info": "Fast & Stable V2Ray",
-      "tunnel_type": 7,
-      "v2ray_json": "{\n  \"outbounds\": [...]\n}"
+      "id": "ssh_direct_2",
+      "name": "SSH Direct + Payload",
+      "info": "Custom Payload on",
+      "tunnel_type": "SSH_DIRECT",
+      "server": "1.2.3.4",
+      "port": "22",
+      "user": "myuser",
+      "pass": "mypass",
+      "payload": "GET / HTTP/1.1[crlf]Host: example.com[crlf][crlf]"
     },
     {
-      "id": "net_3",
-      "name": "Orange Special (.itv File)",
-      "info": "Download Remote Config",
-      "config_url": "https://raw.githubusercontent.com/your-username/your-repo/main/configs/orange.itv"
+      "id": "ssh_proxy_1",
+      "name": "SSH HTTP Proxy",
+      "info": "Payload through HTTP proxy",
+      "tunnel_type": "SSH_PROXY",
+      "server": "1.2.3.4",
+      "port": "22",
+      "user": "myuser",
+      "pass": "mypass",
+      "proxy_ip": "5.6.7.8",
+      "proxy_port": "8080",
+      "payload": "CONNECT [host_port] HTTP/1.1[crlf]Host: example.com[crlf][crlf]"
+    },
+    {
+      "id": "ssh_ssl_1",
+      "name": "SSH SSL / TLS",
+      "info": "SSL tunnel with SNI",
+      "tunnel_type": "SSH_SSL",
+      "server": "1.2.3.4",
+      "port": "443",
+      "user": "myuser",
+      "pass": "mypass",
+      "sni": "example.com"
+    },
+    {
+      "id": "ssl_payload_1",
+      "name": "SSH SSL Payload",
+      "info": "SSL with SNI and payload",
+      "tunnel_type": "SSL_PAYLOAD",
+      "server": "1.2.3.4",
+      "port": "443",
+      "user": "myuser",
+      "pass": "mypass",
+      "sni": "example.com",
+      "payload": "GET / HTTP/1.1[crlf]Host: example.com[crlf][crlf]"
+    },
+    {
+      "id": "ssl_proxy_1",
+      "name": "SSH SSL Proxy",
+      "info": "SSL + proxy + payload",
+      "tunnel_type": "SSL_PROXY",
+      "server": "1.2.3.4",
+      "port": "443",
+      "user": "myuser",
+      "pass": "mypass",
+      "sni": "example.com",
+      "proxy_ip": "5.6.7.8",
+      "proxy_port": "8080",
+      "payload": "CONNECT [host_port] HTTP/1.1[crlf]Host: example.com[crlf][crlf]"
+    },
+    {
+      "id": "udp_1",
+      "name": "Hysteria / UDP",
+      "info": "UDP tunnel",
+      "tunnel_type": "UDP",
+      "udp_server": "1.2.3.4:36712",
+      "udp_auth": "authpassword",
+      "udp_obfs": "obfspassword",
+      "udp_up": "10",
+      "udp_down": "50",
+      "udp_window": "8888"
+    },
+    {
+      "id": "slowdns_1",
+      "name": "SlowDNS",
+      "info": "DNS tunnel",
+      "tunnel_type": "SLOWDNS",
+      "nameserver": "ns.example.com",
+      "chave": "your_public_key_here",
+      "dns_server": "8.8.8.8",
+      "user": "myuser",
+      "pass": "mypass"
+    },
+    {
+      "id": "v2ray_uri_1",
+      "name": "V2Ray (URI)",
+      "info": "vless / vmess / trojan link",
+      "tunnel_type": "V2RAY",
+      "v2ray_json": "vless://11111111-2222-3333-4444-555555555555@example.com:443?type=ws&security=tls&sni=example.com&path=%2F#MyV2Ray"
+    },
+    {
+      "id": "itv_remote_1",
+      "name": "Remote .itv Config",
+      "info": "Downloads and imports a config file",
+      "config_url": "https://raw.githubusercontent.com/your-username/your-repo/main/configs/example.itv"
     }
   ]
 }
