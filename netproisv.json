@@ -78,8 +78,8 @@
       "info": "UDP tunnel",
       "tunnel_type": "UDP",
       "udp_server": "69.164.244.58",
-      "udp_auth": "agnudp",
-      "udp_obfs": "maky:maky",
+      "udp_auth": "maky:maky",
+      "udp_obfs": "agnudp",
       "udp_up": "100",
       "udp_down": "100",
       "udp_window": "8888"
