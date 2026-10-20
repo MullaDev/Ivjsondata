@@ -6,10 +6,10 @@
       "name": "SSH Direct (no payload)",
       "info": "Plain SSH, Custom Payload off",
       "tunnel_type": "SSH_DIRECT",
-      "server": "de-2.stunnel.cc",
+      "server": "1.2.3.4",
       "port": "22",
-      "user": "tunnel-uv",
-      "pass": "00"
+      "user": "myuser",
+      "pass": "mypass"
     },
     {
       "id": "ssh_direct_2",
@@ -77,12 +77,12 @@
       "name": "Hysteria / UDP",
       "info": "UDP tunnel",
       "tunnel_type": "UDP",
-      "udp_server": "69.164.244.58",
-      "udp_auth": "maky:maky",
-      "udp_obfs": "agnudp",
+      "udp_server": "1.2.3.4",
+      "udp_port": "20000-50000",
+      "udp_auth": "authpassword",
+      "udp_obfs": "obfspassword",
       "udp_up": "100",
-      "udp_down": "100",
-      "udp_window": "8888"
+      "udp_down": "100"
     },
     {
       "id": "slowdns_1",
