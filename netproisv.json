@@ -1,5 +1,5 @@
 {
-  "show_network_list": false,
+  "show_network_list": true,
   "networks": [
     {
       "id": "ssh_direct_1",
